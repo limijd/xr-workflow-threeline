@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三线流：AI 时代的「边战边学」方法论</title>
+<style>
+  :root {
+    --text: #1a1a1a;
+    --text-secondary: #555;
+    --bg: #fff;
+    --accent: #2563eb;
+    --border: #e5e7eb;
+    --blockquote-bg: #f8f9fa;
+    --table-header-bg: #f1f5f9;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.8;
+    font-size: 17px;
+  }
+
+  article {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 60px 24px 100px;
+  }
+
+  h1 {
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .meta {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+    margin-bottom: 48px;
+  }
+
+  h2 {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-top: 48px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.95em;
+  }
+
+  th {
+    background: var(--table-header-bg);
+    font-weight: 600;
+    text-align: left;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+  }
+
+  td {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+  }
+
+  ol, ul {
+    margin-bottom: 16px;
+    padding-left: 1.5em;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  blockquote {
+    background: var(--blockquote-bg);
+    border-left: 3px solid var(--accent);
+    padding: 14px 20px;
+    margin: 20px 0;
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    article { padding: 32px 16px 60px; }
+    h1 { font-size: 1.6em; }
+    table { font-size: 0.85em; }
+    th, td { padding: 8px 10px; }
+  }
+</style>
+</head>
+<body>
+<article>
+
+<h1>三线流：AI 时代的「边战边学」方法论</h1>
+<p class="meta">原创 2026-03-22</p>
+
+<h2>什么是三线流</h2>
+
+<p>这篇文章讨论的不仅是项目开发方法，更是对一个根本问题的探索：AI 时代，什么才是有效的学习模型？</p>
+
+<p>过去几个月，我密集地用 AI 做了大量项目，其中不少涉及我并不熟悉的技术领域。在反复实践中，一些模式被证明是稳定有效的。三线流是其中最核心的一个。它脱胎于具体的项目开发实践，但我逐渐意识到，它所触及的是学习本身的底层结构。目前这套方法已实现为 Claude Code Skill，可以由 AI 引导执行完整流程。</p>
+
+<p>三线流的核心思路是：当你用 AI 进入一个陌生领域并需要产出可交付成果时，有三条主线需要同时推进。</p>
+
+<table>
+  <thead>
+    <tr><th>主线</th><th>代号</th><th>核心问题</th><th>产出</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>AI 驾驭</td><td>HE (Harness Engineering)</td><td>怎样让 AI 为我所用？</td><td>提示词策略、协作规范、工作流</td></tr>
+    <tr><td>领域知识</td><td>DK (Domain Knowledge)</td><td>这个领域我需要懂什么？</td><td>知识笔记、术语表、标准索引</td></tr>
+    <tr><td>项目交付</td><td>DL (Delivery)</td><td>项目本身怎么推进？</td><td>代码、文档、可交付成果</td></tr>
+  </tbody>
+</table>
+
+<p>后文用 HE、DK、DL 指代这三条主线。</p>
+
+<p>这三条线不是各自独立运行的，而是<strong>绞合</strong>在一起——像绳索的三股丝线，不是三根绳子捆在一起，而是三股拧成一根，任何一个截面都同时包含三股。这是三线流与"多任务并行"的根本区别。</p>
+
+<p>三线流适用于一类特定场景：你需要用 AI 进入一个不够熟悉的领域，并产出可交付的成果——不是纯学习，不是熟悉领域的日常开发，而是"边学边做边驾驭工具"的复合挑战。当 AI 重新定义了"会"与"不会"的边界，学习本身也需要新的方法论。</p>
+
+<h2>为什么需要三线流</h2>
+
+<p>AI 改变了一个基本事实：你不需要先精通一个领域，就可以在这个领域产出成果。</p>
+
+<p>但随之而来的是一个新问题——你同时面对三重挑战：领域是陌生的，工具是新的，项目要交付。</p>
+
+<p>传统做法是串行处理：先学领域知识，再规划项目，再开发交付。但在 AI 时代，这条路径存在结构性问题。领域知识的"够用"标准取决于你要做什么（DL 定义 DK），AI 驾驭的经验只能在实战中积累（DL 产生 HE），而知识储备直接影响你能否判断 AI 产出的质量（DK 约束 DL）。</p>
+
+<p>三条线天然互锁，强行拆开串行处理反而低效。</p>
+
+<p>三线流的思路是：既然拆不开，就不拆——设计一种工作方式，让每一步同时推进三条线。</p>
+
+<p>需要说明的是，这里的"陌生"不等于"一无所知"。三线流不是让零基础的人靠 AI 硬闯，它的前提是你有足够的基础判断力，能在 AI 辅助下逐步建立领域认知。反过来，当你的 DK 已经足够扎实时，三线流同样适用——DK 线的权重自然降低，精力集中在交付和 AI 驾驭上。同一套方法，权重随知识水平自动调整。</p>
+
+<h2>绞合：三线流的核心机制</h2>
+
+<p>"绞合"是三线流最重要也最容易被误解的概念。</p>
+
+<p>以一个具体场景说明。假设你用 AI 做一个芯片验证项目，让 AI 帮你搭建 UVM 测试平台。搭建过程中，你需要理解 agent、driver、monitor 这些组件的协作方式——这是领域知识（DK）。同时你也在摸索如何描述验证需求才能让 AI 生成高质量的 SystemVerilog 代码——这是 AI 驾驭（HE）。</p>
+
+<p>这不是三件事恰好同时发生，而是同一件事天然具有三个维度。</p>
+
+<p>并行与绞合的区别在于耦合度。并行是上午学知识、下午写代码、晚上调 AI 配置，三条线各自推进，偶尔同步。绞合是每个工作单元都同时在三条线上产出成果——学习因交付压力而聚焦，交付因知识积累而扎实，AI 驾驭因实战反馈而精准。</p>
+
+<p>这种耦合是天然的。三条线之间存在四条增强回路：</p>
+
+<ul>
+  <li><strong>DK 约束 DL</strong>：领域知识决定你能否判断 AI 产出的质量。不懂原理，就无法有效 review AI 的代码。</li>
+  <li><strong>DL 牵引 DK</strong>：交付需求定义了学什么、学多深。没有交付压力的学习容易失焦。</li>
+  <li><strong>HE 放大 DK+DL</strong>：好的 AI 驾驭能力加速一切。一个精准的提示词策略可以让 AI 产出从"勉强能用"变成"直接上线"。</li>
+  <li><strong>DK+DL 反哺 HE</strong>：哪些提示词有效、AI 在什么场景容易出错、上下文怎么管理最高效——这些只有在实战中才能发现。</li>
+</ul>
+
+<p>四条回路拆开，每条的效率都会下降。绞合在一起，则互相放大。</p>
+
+<h2>运作节奏</h2>
+
+<p>三线流在实际推进中如何运转？</p>
+
+<p>核心原则是：<strong>以交付为骨架，知识和驾驭编织在每个节点里。</strong></p>
+
+<p>DL 线提供结构——里程碑、任务分解、推进顺序都沿交付需求展开。但每个任务节点内部，都嵌入了 DK 和 HE 的环节：</p>
+
+<blockquote>学习前备知识 → 确认真的理解了 → 执行任务 → 总结巩固 → 记录 AI 协作经验</blockquote>
+
+<p>这比"直接动手"多了几步，但每步都有明确的理由。</p>
+
+<p><strong>动态权重。</strong> 三条线的权重随项目阶段自然变化。初期 DK 权重高，需要快速建立领域基本功；中期 DL 权重高，知识按需补充，重心在产出；攻坚阶段三线齐头并进；收尾时 DL 全力冲刺，知识和工具已经就位。</p>
+
+<p>这种变化不需要刻意管理。领域越来越熟练时，DK 自然退居幕后；遇到技术难点时，DK 自然回到台前。</p>
+
+<p><strong>知识门禁。</strong> 三线流中看似最慢、实际最关键的设计：每个节点的前备知识必须通过考核才能进入执行。</p>
+
+<p>这是为了应对一个常见陷阱——AI 制造的理解错觉。当 AI 帮你生成了一段完美的代码，你很容易以为自己理解了背后的原理。知识门禁的作用就是打破这个错觉：停下来，用自己的话解释一遍，确保理解是真实的。</p>
+
+<p>考核方式因知识类型而异。概念性知识用费曼方法——能给别人讲清楚，才算理解。技能性知识用实操验证——能自己动手做出来，才算掌握。</p>
+
+<p>这是"以战代练"的另一面：实战中学到的东西，必须真正内化才算数。</p>
+
+<h2>面向未来的学习方法</h2>
+
+<p>三线流的运作机制讲完了，回到开头的问题：这套方法论的意义只是提高项目开发效率吗？</p>
+
+<p>不止于此。它指向一个更深层的变化。</p>
+
+<p>过去的能力积累路径是线性的：学习 → 练习 → 掌握 → 应用。先成为领域"内行"，才有资格产出成果。这条路径并非不好，而是太慢——当 AI 已经能让你在未完全精通的领域高效产出时，坚持完成系统化学习后再动手，不再是严谨，而是浪费。</p>
+
+<p>三线流重新安排了学习发生的时机和方式：学习在交付中发生，交付反过来让学习更精准，AI 驾驭能力在实战中自然成长。</p>
+
+<p>仔细审视这个结构，会发现它与强化学习有深层的结构相似性。每个工作节点都是一个"行动-反馈-调整"循环：在当前知识水平下执行任务，通过知识门禁获得反馈，然后调整下一步的学习重点和协作策略。动态权重本质上是注意力的分配函数，根据各维度的表现自动调节。相比之下，传统的"先学再做"更接近监督学习——需要完整的训练数据才能开始。三线流则是在不完整信息下行动，通过反馈持续优化策略。在 AI 大幅降低试错成本的今天，后者显然是更高效的学习范式。</p>
+
+<p>往更远处看，越来越多的领域可以通过"人 + AI"的协作模式进入，"会不会"正在被重新定义。未来真正有价值的核心能力，可能不是精通某一个领域，而是能否快速与 AI 协作，在陌生领域建立有效的工作能力。</p>
+
+<p>三线流是我在这个方向上迈出的一步。</p>
+
+</article>
+</body>
+</html>
